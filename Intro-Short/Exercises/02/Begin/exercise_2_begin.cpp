@@ -102,11 +102,11 @@ int main( int argc, char* argv[] )
   // EXERCISE: Create views of the right size.
 
   // 1. Device Views
-  // typedef Kokkos::View<double*>   ViewVectorType;
-  // typedef Kokkos::View<double**>  ViewMatrixType;
-  // ViewVectorType y( "y", N );
-  // ViewVectorType x( "x", M );
-  // ViewMatrixType A( "A", N, M );
+  typedef Kokkos::View<double*>   ViewVectorType;
+  typedef Kokkos::View<double**>  ViewMatrixType;
+  ViewVectorType y( "y", N );
+  ViewVectorType x( "x", M );
+  ViewMatrixType A( "A", N, M );
 
   // EXERCISE: This no longer needs allocation after views introduced...
   //   Hint: If arrays are not allocated, they also do not need to be deallocated below
